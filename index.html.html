@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postura Saludable</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #f5f5f5;
+            color: #000000;
+        }
+
+       .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px 0;
+        }
+
+       .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            text-decoration: none;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        nav li {
+            margin-left: 20px;
+        }
+
+        nav a {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+       .menu-toggle {
+            display: none;
+            cursor: pointer;
+        }
+
+       .menu-toggle span {
+            display: block;
+            width: 30px;
+            height: 4px;
+            background-color: #333;
+            margin: 5px 0;
+            transition: all 0.3s ease;
+        }
+
+       .hero {
+            background-color: #f5f5f5;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+       .hero h1 {
+            font-size: 48px;
+            font-weight: bold;
+            color: #529c21;
+            margin-bottom: 50px;
+        }
+
+       .hero p {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+       .button {
+            background-color: #333;
+            color: #fff;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+       .button:hover {
+            background-color: #555;
+        }
+
+       .hero img {
+            width: 100%;
+            max-width: 600px;
+            margin: 30px auto;
+            display: block;
+        }
+
+       .about {
+            background-color: #fff;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+       .about h2 {
+            font-size: 36px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+       .about p {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+       .about img {
+            width: 100%;
+            max-width: 400px;
+            margin: 30px auto;
+            display: block;
+        }
+
+       .work {
+            background-color: #f5f5f5;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+       .work h2 {
+            font-size: 36px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+       .work p {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+       .work h3 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+       .work ul {
+            list-style: disc;
+            padding-left: 20px;
+        }
+
+       .work img {
+            width: 100%;
+            max-width: 400px;
+            margin: 30px auto;
+            display: block;
+        }
+
+       .home {
+            background-color: #fff;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+       .home h2 {
+            font-size: 36px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+       .home p {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+       .home h3 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+       .home ul {
+            list-style: disc;
+            padding-left: 20px;
+        }
+
+       .home img {
+            width: 100%;
+            max-width: 400px;
+            margin: 30px auto;
+            display: block;
+        }
+
+       footer {
+            background-color: #333;
+            color: #fff;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+       footer h2 {
+            font-size: 36px;
+            font-weight: bold;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+       form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 500px;
+            margin: 30px auto;
+        }
+
+       input[type="text"],
+       input[type="email"],
+       textarea {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            background-color: #fff;
+            color: #333;
+        }
+
+       button[type="submit"] {
+            background-color: #fff;
+            color: #333;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+       button[type="submit"]:hover {
+            background-color: #ddd;
+        }
+
+       footer img {
+            width: 100%;
+            max-width: 400px;
+            margin: 30px auto;
+            display: block;
+        }
+
+       @media screen and (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .menu-toggle span {
+                display: block;
+                width: 30px;
+                height: 4px;
+                background-color: #333;
+                margin: 5px 0;
+                transition: all 0.3s ease;
+            }
+
+            .menu-toggle.active span:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+
+            .menu-toggle.active span:nth-child(2) {
+                opacity: 0;
+            }
+
+            .menu-toggle.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(5px, -5px);
+            }
+
+            nav ul.active {
+                display: block;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background-color: #fff;
+                padding: 20px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                z-index: 10;
+            }
+
+            nav ul.active li {
+                margin-left: 0;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">Postura Saludable</a>
+                <ul>
+
+                </ul>
+                <button class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>La importancia de la postura corporal</h1>
+            <p>Bienvenido a Postura Saludable, tu recurso definitivo para aprender sobre la importancia de mantener una buena postura corporal en diversos entornos como el trabajo, la escuela y el hogar.</p>
+            <a href="#" class="button">Más información</a>
+            <img src="https://i.pinimg.com/564x/16/65/f3/1665f3c71907b585aa48420e16783de3.jpg" alt="Hero image">
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="container">
+            <h2>Nuestro Objetivo</h2>
+            <p>Nuestro objetivo es promover hábitos naturales saludables a través de información clara y práctica. Te ofrecemos recursos educativos, consejos prácticos y ejercicios que te ayudarán a mantener una postura correcta en tu vida diaria. ¡Únete a nosotros en el camino hacia una vida más saludable y cómoda!</p>
+            <img src="https://www.ortopediamimas.com/blog-de-ortopedia/wp-content/uploads/2016/06/buena-postura-corporal-1170x658.jpg">
+        </div>
+    </section>
+
+    <section class="work">
+        <div class="container">
+            <h2>La Postura en el Trabajo</h2>
+            <p>Una mala postura en el entorno laboral puede tener serias consecuencias para tu salud. Algunos de los riesgos incluyen:</p>
+            <ul>
+                <li>Dolor de espalda y cuello, causado por una alineación incorrecta del cuerpo.</li>
+                <li>Fatiga y disminución de la productividad debido a la tensión constante en los músculos.</li>
+                <li>Problemas musculoesqueléticos a largo plazo, como hernias discales y tensiones musculares crónicas.</li>
+            </ul>
+            <h3>Consejos para una Buena Postura en la Oficina</h3>
+            <p>Para evitar estos problemas, sigue estos consejos:</p>
+            <ul>
+                <li>Ajusta tu silla y escritorio para que tus pies descansen planos sobre el suelo y tus rodillas estén a la altura de las caderas.</li>
+                <li>Coloca la pantalla de tu ordenador a la altura de los ojos, de modo que no tengas que inclinar la cabeza hacia adelante o hacia abajo.</li>
+                <li>Mantén el teclado y el ratón a una altura cómoda, con los codos cerca del cuerpo y formando un ángulo de 90 grados.</li>
+                <li>Tómate pausas regulares para levantarte, estirarte y mover el cuerpo. Esto ayuda a reducir la tensión muscular y mejora la circulación.</li>
+            </ul>
+           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVQTM9slbPwfH3VE8-l9rgzG33ymHak3SPqqvh6q-L2q00c5Yhq5FZLxN-1rkWBiTlI3w&usqp=CAU" alt="">
+        </div>
+    </section>
+
+    <section class="home">
+        <div class="container">
+            <h2>La postura en el Hogar</h2>
+            <p>Importancia de la Postura en el Entorno Doméstico</p>
+            <p>Mantener una buena postura en casa es crucial ya que:</p>
+            <ul>
+                <li>Afecta cómo realizamos las tareas diarias y actividades de ocio, desde cocinar hasta ver televisión.</li>
+                <li>Ayuda a prevenir dolores y lesiones que pueden interferir con nuestras actividades diarias.</li>
+            </ul>
+            <h3>Consejos para Mantener una Buena Postura en Casa</h3>
+            <p>Para asegurar una buena postura en casa, sigue estos consejos:</p>
+            <ul>
+                <li>Al sentarte: Mantén la espalda recta y apoya los pies en el suelo. Usa cojines para apoyo lumbar si es necesario.</li>
+                <li>Al ver televisión: Siéntate en un ángulo donde no tengas que torcer el cuello ni la espalda. Considera la altura y la distancia de la pantalla.</li>
+                <li>Al dormir: Usa un colchón y una almohada que ofrezcan el soporte adecuado. Duerme de lado o boca arriba para mantener la alineación de la columna.</li>
+            </ul>
+            <h3>Ejercicios y Prácticas Saludables</h3>
+            <p>Implementa estas prácticas para mejorar tu postura en casa:</p>
+            <ul>
+                <li>Estiramientos diarios: Incluye estiramientos de espalda, cuello y piernas en tu rutina diaria.</li>
+                <li>Fortalecimiento muscular: Ejercicios como el yoga y el pilates pueden fortalecer los músculos del core y mejorar la postura.</li>
+                <li>Mindfulness: Practica la conciencia corporal y la relajación para reducir la tensión muscular y mejorar la postura.</li>
+            </ul>
+            <img src="https://centromedicoabc.com/storage/2022/12/fisioterapeuta.jpg" alt="Home image">
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <h2>Contáctanos</h2>
+            <form>
+                <input type="text" placeholder="Nombre" required>
+                <input type="email" placeholder="Correo electrónico" required>
+                <textarea placeholder="Mensaje" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQROlaiiyVv03aSLUlTvQM3sk6eF09Cway07A&s" alt="Footer image">
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
